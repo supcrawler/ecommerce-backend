@@ -5,7 +5,6 @@ from newsletter.models import Subscriber
 from .serializers import SubscriberSerializer
 from .permissions import IsPostOrIsAdmin
 
-
 class Subscribers(generics.ListCreateAPIView):
     """
     API view for listing all existing subscribers.
@@ -17,4 +16,4 @@ class Subscribers(generics.ListCreateAPIView):
 
     queryset = Subscriber.objects.all()
     serializer_class = SubscriberSerializer
-    permission_classes = (IsPostOrIsAdmin,)  # GET for admin, POST for everyone
+    permission_classes = (IsPostOrIsAdmin, ) # GET for admin, POST for everyone

@@ -1,8 +1,9 @@
 env/
 __pycache__/
-htmlcov
-.coverage
+
 .vscode
 
 *.log
 *.pyc
+
+db.sqlite3
