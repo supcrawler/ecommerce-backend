@@ -6,7 +6,7 @@ import django_heroku
 
 SECRET_KEY = os.environ.get("SECRET_KEY", "")
 
-DEBUG = os.environ.get("DEBUG", "")
+DEBUG = False
 
 ALLOWED_HOSTS = ["https://ecommerce-backend-django.herokuapp.com/", ]
 
@@ -17,6 +17,8 @@ INSTALLED_APPS += ["storages"]
 
 # MEDIA_URL = "/media/"
 # MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # todo: use mailgun
 
 STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY", "")
 STRIPE_PUBLISHABLE_KEY = os.environ.get("STRIPE_PUBLISHABLE_KEY", "")

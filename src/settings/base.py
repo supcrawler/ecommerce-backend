@@ -31,7 +31,7 @@ INSTALLED_APPS = [
     'newsletter',
 ]
 
-SITE_ID = 2
+SITE_ID = 1
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -49,7 +49,7 @@ ROOT_URLCONF = 'src.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates', ],
+        'DIRS': [os.path.join(BASE_DIR, "templates"), ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
